@@ -1,7 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import './Counter.css'
 
 function Counter() {
+
+    const count = useSelector((state) => state.incdsc)
+
+    console.log(count, ">>>>");
+
   return (
     <>
         <div className='container'>
@@ -12,7 +18,9 @@ function Counter() {
                 </div>
                 <div className='w-3'>
                     <h3>
-                        0
+                        {
+                            count
+                        }
                     </h3>
                 </div>
                 <div className='w-2'>
