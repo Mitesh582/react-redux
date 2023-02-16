@@ -6,8 +6,6 @@ function Counter() {
 
     const count = useSelector((state) => state.incdsc)
 
-    console.log(count, ">>>>");
-
   return (
     <>
         <div className='container'>
