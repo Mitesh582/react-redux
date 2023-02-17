@@ -8,7 +8,9 @@ const incdsc = (state = 0, action) => {
         }   
         break;
         case DSC:{
-            return state - 1;
+            if (state > 0){
+                return state - 1;
+            }
         }
         break;
         default:
