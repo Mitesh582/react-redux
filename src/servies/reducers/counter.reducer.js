@@ -1,18 +1,36 @@
-import { INC, DSC} from '../constant/actionType';
+import { INC, DSC, LOADING } from '../constant/actionType';
 
-const incdsc = (state = 0, action) => {
+const initialValue = {
+    count: 0,
+    isLoading: true
+}
+
+const incdsc = (state = initialValue, action) => {
 
     switch (action.type) {
-        case INC:{
-            return state + 1;
-        }   
-        break;
-        case DSC:{
-            if (state > 0){
-                return state - 1;
+        case INC: {
+            return {
+                ...state,
+                count: state.count + 1,
+                isLoading: false
             }
         }
-        break;
+            break;
+        case DSC: {
+            return {
+                ...state,
+                count: state.count - 1,
+                isLoading: false
+            }
+        }
+            break;
+        case LOADING: {
+            return {
+                ...state,
+                isLoading: true
+            }
+        }
+            break;
         default:
             return state;
     }
