@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './Counter.css'
-import { increment, decrement, incrementAsync, decrementAsync } from '../../servies/action/Counter.action'
+import { incrementAsync, decrementAsync } from '../../servies/action/Counter.action'
 
 function Counter() {
 
@@ -16,6 +16,7 @@ function Counter() {
             <div className='row justify-content-center text-center'>
 
                 <div className='w-2'>
+                    
                     <button onClick={() => dispatch(incrementAsync())}> + </button>
                 </div>
                 <div className='w-3'>

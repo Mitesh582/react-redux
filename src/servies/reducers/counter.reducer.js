@@ -2,7 +2,7 @@ import { INC, DSC, LOADING } from '../constant/actionType';
 
 const initialValue = {
     count: 0,
-    isLoading: true
+    isLoading: false
 }
 
 const incdsc = (state = initialValue, action) => {
